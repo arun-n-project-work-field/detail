@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "29222302864",
+    "project_id": "task-b486d",
+    "storage_bucket": "task-b486d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29222302864:android:e67594f0f834adca9f1415",
+        "android_client_info": {
+          "package_name": "com.example.pupil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa2A2Wv6OwSdu9JFYkb0kDT4o-scfJf3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
