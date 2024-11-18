@@ -89,6 +89,7 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
                         loading = false;
                       });
                       ToastMessage().toastMessage(error.toString());
+                      print(error.toString());
                     }
                   })
             ],

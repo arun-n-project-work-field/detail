@@ -1,8 +1,13 @@
+import 'package:pupil/Auth_Screens/LoginWithAccount.dart';
 import 'package:pupil/Auth_Screens/LoginWithPhoneScreen.dart';
+import 'package:pupil/Screens/DashboardScreen.dart';
+import 'package:pupil/Screens/test.dart';
 import 'package:pupil/Widgets/Buttons/RoundButtons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+
+import '../Widgets/Messages/ToastMessage.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -70,6 +75,28 @@ class _LoginScreenState extends State<LoginScreen> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => const LoginWithPhoneScreen()));
+                      }),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const Row(children: <Widget>[
+                    Expanded(child: Divider()),
+                    Text("or"),
+                    Expanded(child: Divider()),
+                  ]),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  RoundButton(
+                      title: "Login using your Google Account",
+                      onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const GoogleSignInScreen()));
                       }),
                 ],
               ),

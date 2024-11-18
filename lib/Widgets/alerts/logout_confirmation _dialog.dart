@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:pupil/Auth_Screens/LoginScreen.dart';
 
 class LogoutConfirmationDialog extends StatelessWidget {
@@ -22,6 +23,7 @@ class LogoutConfirmationDialog extends StatelessWidget {
         TextButton(
           child: const Text('Logout'),
           onPressed: () {
+            signOutFromGoogle();
             _auth.signOut().then((value) {
               Navigator.pushReplacement(
                 context,
@@ -34,5 +36,13 @@ class LogoutConfirmationDialog extends StatelessWidget {
         ),
       ],
     );
+  }
+  Future<bool> signOutFromGoogle() async {
+    try {
+      await GoogleSignIn().signOut();
+      return true;
+    } on Exception catch (_) {
+      return false;
+    }
   }
 }
