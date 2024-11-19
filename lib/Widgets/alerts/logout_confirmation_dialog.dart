@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:pupil/Auth_Screens/LoginScreen.dart';
+import 'package:pupil/auth_screens/login.dart';
 
 class LogoutConfirmationDialog extends StatelessWidget {
   final FirebaseAuth _auth = FirebaseAuth.instance;
